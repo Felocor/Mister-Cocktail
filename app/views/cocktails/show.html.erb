@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+      <h1><%= @cocktail.name %></h1>
+      <%= link_to 'Edit', edit_cocktail_path(@cocktail) %>
+      |
+      <%= link_to 'Delete', cocktail_path(@cocktail), method: 'delete' %>
+      |
+      <%= link_to 'Back', cocktails_path %>
+      |
+      <%= link_to 'New Dose', new_cocktail_dose_path(@cocktail) %>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <div class="row">
+
+
+    <table class='table'>
+      <%= render @doses %>
+    </table>
+  </div>
+</div>
